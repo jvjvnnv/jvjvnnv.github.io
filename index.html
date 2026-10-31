@@ -4,65 +4,206 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ベビー用品 実質価格メモ</title>
-<meta name="description" content="おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、1枚あたりの実質価格を比べるメモです。">
+<meta name="description" content="おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、1枚（100g）あたりのポイント込み実質価格で比べています。">
 <style>
-  :root {
-    --bg: #fbfaf7; --fg: #22201c; --muted: #6b665e; --line: #e4e0d8; --accent: #c2410c; --card: #ffffff;
-  }
+  :root { --bg:#fbfaf7; --fg:#22201c; --muted:#6b665e; --line:#e4e0d8; --accent:#c2410c; --card:#fff; --soft:#fdf1ea; --ok:#15803d; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #1a1916; --fg: #ece9e3; --muted: #a39e94; --line: #34312c; --accent: #fb923c; --card: #22211d; }
+    :root { --bg:#1a1916; --fg:#ece9e3; --muted:#a39e94; --line:#34312c; --accent:#fb923c; --card:#22211d; --soft:#3a2a20; --ok:#4ade80; }
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font-family: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
-    line-height: 1.8;
-  }
-  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
-  h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 8px; }
-  .lead { color: var(--muted); margin: 0 0 40px; }
-  h2 { font-size: 1.1rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
-  ul { padding-left: 1.2em; margin: 0; }
-  li + li { margin-top: 4px; }
-  .formula {
-    background: var(--card); border: 1px solid var(--line); border-radius: 8px;
-    padding: 12px 16px; margin: 12px 0; font-size: 0.95rem;
-  }
-  .note { color: var(--muted); font-size: 0.9rem; }
-  a { color: var(--accent); }
-  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); }
+  body { margin:0; background:var(--bg); color:var(--fg); line-height:1.7;
+    font-family: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 6px; }
+  .lead { color: var(--muted); margin: 0 0 20px; }
+  .bar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
+    background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; margin-bottom:8px; }
+  .bar .upd { font-size:.9rem; color:var(--muted); }
+  .spu { display:flex; gap:6px; align-items:center; font-size:.9rem; }
+  .spu button { font: inherit; border:1px solid var(--line); background:var(--bg); color:var(--fg); border-radius:999px; padding:2px 12px; cursor:pointer; }
+  .spu button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  h2 { font-size: 1.15rem; margin: 36px 0 10px; display:flex; align-items:baseline; gap:10px; }
+  h2 .per { font-size:.85rem; font-weight:normal; color:var(--muted); }
+  .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--card); }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  th, td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:middle; }
+  tbody tr:last-child td { border-bottom:none; }
+  th { font-size:.8rem; color:var(--muted); font-weight:600; white-space:nowrap; }
+  .num { text-align:right; white-space:nowrap; font-variant-numeric: tabular-nums; }
+  .eff { font-weight:700; font-size:1.05rem; color:var(--accent); }
+  small { font-size:.75em; margin-left:1px; }
+  .muted { color:var(--muted); }
+  .name { min-width: 200px; }
+  .sub { font-size:.78rem; color:var(--muted); }
+  .badge { display:inline-block; margin-left:6px; font-size:.72rem; padding:0 8px; border-radius:999px; background:var(--soft); color:var(--accent); white-space:nowrap; }
+  .badge.low { background:var(--ok); color:#fff; }
+  .spark { width:120px; height:28px; display:block; }
+  .spark polyline { fill:none; stroke:var(--accent); stroke-width:1.5; }
+  .spark-empty { font-size:.75rem; color:var(--muted); white-space:nowrap; }
+  .go a { white-space:nowrap; font-size:.85rem; color:var(--accent); }
+  .note { color:var(--muted); font-size:.88rem; }
+  .formula { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 16px; margin:12px 0; font-size:.92rem; }
+  h3 { font-size:1rem; margin:36px 0 8px; }
+  ul { padding-left:1.2em; margin:0; }
+  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font-size:.85rem; color:var(--muted); }
+  footer a { color: var(--accent); }
 </style>
 </head>
 <body>
 <main>
   <h1>ベビー用品 実質価格メモ</h1>
-  <p class="lead">おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、「1枚（100g）あたり、ポイント込みでいくらか」を比べています。</p>
+  <p class="lead">おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、「1枚（100g）あたり、ポイント込みでいくらか」で比べています。</p>
 
-  <h2>記録している商品</h2>
-  <ul>
-    <li>パンパース テープ M</li>
-    <li>メリーズ パンツ L</li>
-    <li>ムーニーマン パンツ L</li>
-    <li>おしりふき（パンパース 肌へのいちばん）</li>
-    <li>粉ミルク はいはい</li>
-  </ul>
+  <div class="bar">
+    <span class="upd">2026年10月31日 時点の価格・送料無料の出品のみ</span>
+    <span class="spu">SPU倍率 <button type="button" data-spu="1" aria-pressed="false">1倍</button><button type="button" data-spu="5" aria-pressed="true">5倍</button><button type="button" data-spu="10" aria-pressed="false">10倍</button></span>
+  </div>
+  <p class="note">「実質」はポイントを差し引いた価格、「相場」は今日の送料無料出品の中央値です。</p>
 
-  <h2>計算のしかた</h2>
-  <p>送料込みの商品だけを対象に、商品名から総枚数（総グラム数）を読み取って単価を出しています。</p>
+  <section>
+    <h2>おむつ<span class="per">1枚あたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name">ムーニー テープ M<span class="badge">相場より29%安い</span><div class="sub">ショップ泉嘉・送料無料9出品中</div></td>
+        <td class="num eff" data-spu1="33.7" data-spu5="32.5" data-spu10="30.9">32.5<small>円</small></td>
+        <td class="num">34.0<small>円</small></td>
+        <td class="num muted">48.2<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00uvg2o.oziwn53c.g00uvg2o.oziwo12f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fizuka%2Faj4009rakuten353fd0838f%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fizuka%2Fi%2F10001070%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">パンパース さらさらケア パンツ L<span class="badge">相場より22%安い</span><div class="sub">TRYX3楽天市場店・送料無料19出品中</div></td>
+        <td class="num eff" data-spu1="36.6" data-spu5="35.3" data-spu10="33.6">35.3<small>円</small></td>
+        <td class="num">36.9<small>円</small></td>
+        <td class="num muted">47.5<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00psjvo.oziwnc71.g00psjvo.oziwofc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftry3%2F4987176386304-2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ftry3%2Fi%2F10037324%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">メリーズ エアスルー パンツ L<div class="sub">ファビュラス・送料無料10出品中</div></td>
+        <td class="num eff" data-spu1="36.8" data-spu5="35.4" data-spu10="33.7">35.4<small>円</small></td>
+        <td class="num">37.1<small>円</small></td>
+        <td class="num muted">38.3<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00r75to.oziwn79b.g00r75to.oziwo661/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffabuleux%2F10002662%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ffabuleux%2Fi%2F10002662%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">メリーズ エアスルー テープ M<div class="sub">サンドラッグe-shop・送料無料22出品中</div></td>
+        <td class="num eff" data-spu1="37.2" data-spu5="35.8" data-spu10="34.1">35.8<small>円</small></td>
+        <td class="num">37.5<small>円</small></td>
+        <td class="num muted">41.1<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4901301437716x4%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10150325%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">パンパース さらさらケア テープ M<span class="badge">相場より16%安い</span><div class="sub">ベイシア楽天市場店・送料無料19出品中</div></td>
+        <td class="num eff" data-spu1="38.0" data-spu5="36.6" data-spu10="34.9">36.6<small>円</small></td>
+        <td class="num">38.4<small>円</small></td>
+        <td class="num muted">45.6<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.oziwnd63.g00s0vmo.oziwoa6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4987176203281-4%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10178955%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">パンパース 肌へのいちばん テープ M<span class="badge">相場より22%安い</span><div class="sub">ベイシア楽天市場店・送料無料17出品中</div></td>
+        <td class="num eff" data-spu1="38.7" data-spu5="37.3" data-spu10="35.5">37.3<small>円</small></td>
+        <td class="num">39.1<small>円</small></td>
+        <td class="num muted">50.3<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.oziwnd63.g00s0vmo.oziwoa6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4987176341518-3%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10176871%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">ムーニーマン パンツ L<span class="badge">相場より14%安い</span><div class="sub">サンドラッグe-shop・送料無料12出品中</div></td>
+        <td class="num eff" data-spu1="43.5" data-spu5="41.9" data-spu10="39.9">41.9<small>円</small></td>
+        <td class="num">43.9<small>円</small></td>
+        <td class="num muted">50.9<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4903111206155x4%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10052646%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">メリーズ ファーストプレミアム パンツ L<span class="badge">相場より20%安い</span><div class="sub">サンドラッグe-shop・送料無料12出品中</div></td>
+        <td class="num eff" data-spu1="44.9" data-spu5="43.2" data-spu10="41.2">43.2<small>円</small></td>
+        <td class="num">45.3<small>円</small></td>
+        <td class="num muted">56.7<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4901301396556x4%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10174030%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
+    <h2>おしりふき<span class="per">1枚あたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name">おしりふき ムーニー やわらか素材<span class="badge">相場より40%安い</span><div class="sub">ユニ・チャームダイレクトショップ・送料無料19出品中</div></td>
+        <td class="num eff" data-spu1="1.52" data-spu5="1.47" data-spu10="1.40">1.47<small>円</small></td>
+        <td class="num">1.54<small>円</small></td>
+        <td class="num muted">2.56<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00q215o.oziwn0bb.g00q215o.oziwo1f8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F100695%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10001904%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">おしりふき パンパース 肌へのいちばん<span class="badge">相場より23%安い</span><div class="sub">ぱーそなるたのめーる・送料無料12出品中</div></td>
+        <td class="num eff" data-spu1="3.75" data-spu5="3.61" data-spu10="3.43">3.61<small>円</small></td>
+        <td class="num">3.93<small>円</small></td>
+        <td class="num muted">5.11<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qpdqo.oziwn647.g00qpdqo.oziwo86e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fp-tano%2F961-3083%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fp-tano%2Fi%2F10643625%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
+    <h2>粉ミルク<span class="per">100gあたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name">粉ミルク はいはい<div class="sub">ベイシア楽天市場店・送料無料27出品中</div></td>
+        <td class="num eff" data-spu1="274.6" data-spu5="264.3" data-spu10="251.5">264.3<small>円</small></td>
+        <td class="num">277.2<small>円</small></td>
+        <td class="num muted">300.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.oziwnd63.g00s0vmo.oziwoa6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4987244600059%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10027711%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">粉ミルク ほほえみ<div class="sub">ゴダイ 楽天市場店・送料無料12出品中</div></td>
+        <td class="num eff" data-spu1="367.0" data-spu5="353.3" data-spu10="336.1">353.3<small>円</small></td>
+        <td class="num">370.4<small>円</small></td>
+        <td class="num muted">400.6<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00ruqao.oziwne39.g00ruqao.oziwo649/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-godai%2F4902705129566%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-godai%2Fi%2F10188128%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name">粉ミルク すこやかM1<span class="badge">相場より16%安い</span><div class="sub">ベイシア楽天市場店・送料無料17出品中</div></td>
+        <td class="num eff" data-spu1="377.7" data-spu5="363.6" data-spu10="346.0">363.6<small>円</small></td>
+        <td class="num">381.2<small>円</small></td>
+        <td class="num muted">453.3<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.oziwnd63.g00s0vmo.oziwoa6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4987493000389%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10057768%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <h3>計算のしかた</h3>
   <div class="formula">
-    獲得ポイント ＝ 税抜価格 ×（SPU倍率 ＋ ショップのポイント倍率 − 1）%<br>
+    獲得ポイント ＝ 税抜価格 ×（SPU倍率 ＋ ショップのポイント倍率 − 1）%（切り捨て）<br>
     実質価格 ＝ 表示価格 − 獲得ポイント
   </div>
-  <ul>
-    <li>税率はおむつ・おしりふきが10%、粉ミルクが8%（軽減税率）として計算しています。</li>
-    <li>「過去最安」は、このメモで毎日記録した価格の中で比べたものです。</li>
-    <li>セール直前に値上げされた疑いがある商品は、紹介の対象から外しています。</li>
+  <ul class="note">
+    <li>商品名から総枚数（総グラム数）を読み取り、まとめ買いの単価を出しています。税率はおむつ・おしりふき10%、粉ミルク8%です。</li>
+    <li>お買い物マラソンの買い回り、クーポン、ポイントの上限・期間限定ポイントは含めていません。</li>
+    <li>価格は記録した時点のものです。購入前に必ず商品ページで最新の価格とポイントを確認してください。</li>
+    <li>「過去最安」は、このメモで毎日記録した価格の中での比較です。セール直前に値上げされた疑いがある出品は表示しません。</li>
   </ul>
-  <p class="note">お買い物マラソンの買い回り、クーポン、ポイントの上限や期間限定ポイントは計算に含めていません。最新の価格とポイントは、必ず商品ページで確認してください。</p>
 
-  <h2>このメモについて</h2>
-  <ul>
-    <li>紹介する商品リンクには、楽天アフィリエイトのリンクを含みます。</li>
+  <h3>このメモについて</h3>
+  <ul class="note">
+    <li>商品リンクは楽天アフィリエイトのリンクです（PR）。</li>
     <li>メーカーやショップとは関係のない、個人による記録です。</li>
   </ul>
 
@@ -71,5 +212,16 @@
     <a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
   </footer>
 </main>
+<script>
+  document.querySelectorAll('.spu button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var spu = b.dataset.spu;
+      document.querySelectorAll('.spu button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      document.querySelectorAll('.eff').forEach(function (td) {
+        td.firstChild.nodeValue = td.getAttribute('data-spu' + spu);
+      });
+    });
+  });
+</script>
 </body>
 </html>
