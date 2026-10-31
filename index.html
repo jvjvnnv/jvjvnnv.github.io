@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ベビー用品 実質価格メモ</title>
+<meta name="description" content="おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、1枚あたりの実質価格を比べるメモです。">
+<style>
+  :root {
+    --bg: #fbfaf7; --fg: #22201c; --muted: #6b665e; --line: #e4e0d8; --accent: #c2410c; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1a1916; --fg: #ece9e3; --muted: #a39e94; --line: #34312c; --accent: #fb923c; --card: #22211d; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    line-height: 1.8;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 8px; }
+  .lead { color: var(--muted); margin: 0 0 40px; }
+  h2 { font-size: 1.1rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  ul { padding-left: 1.2em; margin: 0; }
+  li + li { margin-top: 4px; }
+  .formula {
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+    padding: 12px 16px; margin: 12px 0; font-size: 0.95rem;
+  }
+  .note { color: var(--muted); font-size: 0.9rem; }
+  a { color: var(--accent); }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>ベビー用品 実質価格メモ</h1>
+  <p class="lead">おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、「1枚（100g）あたり、ポイント込みでいくらか」を比べています。</p>
+
+  <h2>記録している商品</h2>
+  <ul>
+    <li>パンパース テープ M</li>
+    <li>メリーズ パンツ L</li>
+    <li>ムーニーマン パンツ L</li>
+    <li>おしりふき（パンパース 肌へのいちばん）</li>
+    <li>粉ミルク はいはい</li>
+  </ul>
+
+  <h2>計算のしかた</h2>
+  <p>送料込みの商品だけを対象に、商品名から総枚数（総グラム数）を読み取って単価を出しています。</p>
+  <div class="formula">
+    獲得ポイント ＝ 税抜価格 ×（SPU倍率 ＋ ショップのポイント倍率 − 1）%<br>
+    実質価格 ＝ 表示価格 − 獲得ポイント
+  </div>
+  <ul>
+    <li>税率はおむつ・おしりふきが10%、粉ミルクが8%（軽減税率）として計算しています。</li>
+    <li>「過去最安」は、このメモで毎日記録した価格の中で比べたものです。</li>
+    <li>セール直前に値上げされた疑いがある商品は、紹介の対象から外しています。</li>
+  </ul>
+  <p class="note">お買い物マラソンの買い回り、クーポン、ポイントの上限や期間限定ポイントは計算に含めていません。最新の価格とポイントは、必ず商品ページで確認してください。</p>
+
+  <h2>このメモについて</h2>
+  <ul>
+    <li>紹介する商品リンクには、楽天アフィリエイトのリンクを含みます。</li>
+    <li>メーカーやショップとは関係のない、個人による記録です。</li>
+  </ul>
+
+  <footer>
+    <!-- Rakuten Web Service Credit -->
+    <a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+  </footer>
+</main>
+</body>
+</html>
