@@ -105,15 +105,14 @@ main { padding-top: 20px; }
 .about-data b { color: var(--fg); }
 .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
 .chips span { background:var(--teal-bg); color:var(--teal-fg); padding:1px 10px; border-radius:4px; font-size:.78rem; }
-.cats { display:flex; flex-direction:column; gap:14px; margin:4px 0 20px; }
-.cat-group-name { font-family:"Zen Maru Gothic", system-ui, sans-serif; font-weight:700; font-size:.9rem; color:var(--muted); margin:0 0 6px 2px; }
-.cat-tiles { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:8px; }
-.cat-tile { display:flex; flex-direction:column; align-items:center; gap:2px; padding:10px 6px 8px; background:var(--card); border:1px solid var(--line); border-radius:12px; text-decoration:none; color:var(--fg); text-align:center; transition: transform .12s, border-color .12s; }
-.cat-tile:hover { transform: translateY(-2px); border-color: var(--accent); }
-.cat-ic { font-size:1.6rem; line-height:1.2; }
-.cat-name { font-size:.8rem; line-height:1.35; font-weight:600; }
-.cat-n { font-size:.7rem; color:var(--muted); }
-@media (max-width: 640px) { .cat-tiles { grid-template-columns:repeat(3, 1fr); } }
+.cats { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:6px 16px; margin:4px 0 20px; }
+.shelf { display:grid; grid-template-columns: 8.5em 1fr; gap:8px; padding:10px 0; align-items:start; }
+.shelf + .shelf { border-top:1px dashed var(--line); }
+.shelf-name { font-family:"Zen Maru Gothic", system-ui, sans-serif; font-weight:700; font-size:.92rem; display:flex; gap:6px; align-items:center; padding-top:2px; }
+.shelf-links { display:flex; flex-wrap:wrap; gap:4px 16px; font-size:.9rem; line-height:1.9; }
+.shelf-links a { color:var(--fg); text-decoration:none; border-bottom:1px solid var(--line); }
+.shelf-links a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+@media (max-width: 640px) { .shelf { grid-template-columns: 1fr; gap:2px; } .shelf-links { gap:2px 14px; } }
 .faq { margin-top:32px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; font-size:.88rem; color:var(--muted); }
 .faq summary { cursor:pointer; color:var(--fg); font-weight:600; }
 @media (max-width: 640px) {
