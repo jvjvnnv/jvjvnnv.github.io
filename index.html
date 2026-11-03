@@ -3,94 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>まとめ買い 実質価格メモ</title>
-<meta name="description" content="水・お茶・コーラなど飲料のケース買いや、おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、1L・1枚あたりのポイント込み実質価格で比べています。">
-<style>
-  :root { --bg:#fbfaf7; --fg:#22201c; --muted:#6b665e; --line:#e4e0d8; --accent:#c2410c; --card:#fff; --soft:#fdf1ea; --ok:#15803d; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#1a1916; --fg:#ece9e3; --muted:#a39e94; --line:#34312c; --accent:#fb923c; --card:#22211d; --soft:#3a2a20; --ok:#4ade80; }
-  }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); line-height:1.7;
-    font-family: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif; }
-  main { max-width: 860px; margin: 0 auto; padding: 40px 16px 64px; }
-  h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 6px; }
-  .lead { color: var(--muted); margin: 0 0 20px; }
-  .bar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
-    background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; margin-bottom:8px; }
-  .bar .upd { font-size:.9rem; color:var(--muted); }
-  .spu { display:flex; gap:6px; align-items:center; font-size:.9rem; }
-  .spu button { font: inherit; border:1px solid var(--line); background:var(--bg); color:var(--fg); border-radius:999px; padding:2px 12px; cursor:pointer; }
-  .spu button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
-  h2 { font-size: 1.15rem; margin: 36px 0 10px; display:flex; align-items:baseline; gap:10px; }
-  h2 .per { font-size:.85rem; font-weight:normal; color:var(--muted); }
-  .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--card); }
-  table { width:100%; border-collapse:collapse; font-size:.95rem; }
-  th, td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:middle; }
-  tbody tr:last-child td { border-bottom:none; }
-  th { font-size:.8rem; color:var(--muted); font-weight:600; white-space:nowrap; }
-  .num { text-align:right; white-space:nowrap; font-variant-numeric: tabular-nums; }
-  .eff { font-weight:700; font-size:1.05rem; color:var(--accent); }
-  small { font-size:.75em; margin-left:1px; }
-  .muted { color:var(--muted); }
-  .name { min-width: 200px; }
-  .sub { font-size:.78rem; color:var(--muted); }
-  .badge { display:inline-block; margin-left:6px; font-size:.72rem; padding:0 8px; border-radius:999px; background:var(--soft); color:var(--accent); white-space:nowrap; }
-  .badge.low { background:var(--ok); color:#fff; }
-  .spark { width:120px; height:28px; display:block; }
-  .spark polyline { fill:none; stroke:var(--accent); stroke-width:1.5; }
-  .spark-empty { font-size:.75rem; color:var(--muted); white-space:nowrap; }
-  .go a { white-space:nowrap; font-size:.85rem; color:var(--accent); }
-  .note { color:var(--muted); font-size:.88rem; }
-  .formula { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 16px; margin:12px 0; font-size:.92rem; }
-  h3 { font-size:1rem; margin:36px 0 8px; }
-  ul { padding-left:1.2em; margin:0; }
-  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font-size:.85rem; color:var(--muted); }
-  footer a { color: var(--accent); }
-  .jump { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
-  .jump a { font-size:.85rem; padding:2px 12px; border:1px solid var(--line); border-radius:999px; color:var(--fg); text-decoration:none; background:var(--card); }
-</style>
+<title>まとめ買い 実質価格メモ｜楽天のケース買い・日用品を1L・1枚あたりの実質価格で毎日比較</title>
+<meta name="description" content="水・お茶・炭酸飲料・スポーツドリンク・トイレットペーパー・ティッシュ・洗濯洗剤・柔軟剤・食器用洗剤・ボディソープ・ハンドソープ・歯みがき・大人用おむつ・おむつ・おしりふき・粉ミルク の楽天市場での最安値を毎日記録。1L・1枚あたりのポイント込み実質価格、相場との差、価格推移を掲載しています。">
+<link rel="canonical" href="https://jvjvnnv.github.io/">
+<meta property="og:title" content="まとめ買い 実質価格メモ｜楽天のケース買い・日用品を1L・1枚あたりの実質価格で毎日比較">
+<meta property="og:description" content="水・お茶・炭酸飲料・スポーツドリンク・トイレットペーパー・ティッシュ・洗濯洗剤・柔軟剤・食器用洗剤・ボディソープ・ハンドソープ・歯みがき・大人用おむつ・おむつ・おしりふき・粉ミルク の楽天市場での最安値を毎日記録。1L・1枚あたりのポイント込み実質価格、相場との差、価格推移を掲載しています。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jvjvnnv.github.io/">
+<link rel="stylesheet" href="assets/style.css">
+
 </head>
 <body>
 <main>
   <h1>まとめ買い 実質価格メモ</h1>
-  <p class="lead">水・お茶・コーラのケース買いや、おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、「1L・1枚あたり、ポイント込みでいくらか」で比べています。</p>
-  <nav class="jump"><a href="#cat-0">水・お茶</a><a href="#cat-1">炭酸飲料</a><a href="#cat-2">おむつ</a><a href="#cat-3">おしりふき</a><a href="#cat-4">粉ミルク</a></nav>
-
-  <div class="bar">
-    <span class="upd">2026年11月3日 時点の価格・送料無料の出品のみ</span>
-    <span class="spu">SPU倍率 <button type="button" data-spu="1" aria-pressed="false">1倍</button><button type="button" data-spu="5" aria-pressed="true">5倍</button><button type="button" data-spu="10" aria-pressed="false">10倍</button></span>
-  </div>
+  <p class="lead">水・お茶・炭酸飲料・スポーツドリンク・トイレットペーパー・ティッシュ・洗濯洗剤・柔軟剤・食器用洗剤・ボディソープ・ハンドソープ・歯みがき・大人用おむつ・おむつ・おしりふき・粉ミルクの楽天市場での価格を毎日記録し、「1L・1枚あたり、ポイント込みでいくらか」で比べています。商品名を押すと、最安値の日付と価格推移が見られます。</p>
+  <nav class="jump"><a href="#cat-0">水・お茶</a><a href="#cat-1">炭酸飲料</a><a href="#cat-2">スポーツドリンク</a><a href="#cat-3">トイレットペーパー</a><a href="#cat-4">ティッシュ</a><a href="#cat-5">洗濯洗剤・柔軟剤</a><a href="#cat-6">食器用洗剤</a><a href="#cat-7">ボディソープ・ハンドソープ</a><a href="#cat-8">歯みがき</a><a href="#cat-9">大人用おむつ</a><a href="#cat-10">おむつ</a><a href="#cat-11">おしりふき</a><a href="#cat-12">粉ミルク</a></nav>
+  <div class="bar"><span class="upd">2026年11月3日 時点・送料無料の出品のみ</span><span class="spu">SPU倍率 <button type="button" data-spu="1" aria-pressed="false">1倍</button><button type="button" data-spu="5" aria-pressed="true">5倍</button><button type="button" data-spu="10" aria-pressed="false">10倍</button></span></div>
   <p class="note">「実質」はポイントを差し引いた価格、「相場」は今日の送料無料出品の中央値です。</p>
-
   <section id="cat-0">
     <h2>水・お茶<span class="per">1Lあたり</span></h2>
     <div class="table-wrap"><table>
       <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
       <tbody>
       <tr>
-        <td class="name">サントリー天然水 2L<span class="badge">相場より36%安い</span><div class="sub">クラウドショップ楽天市場店・送料無料45出品中</div></td>
-        <td class="num eff" data-spu1="71.3" data-spu5="68.7" data-spu10="65.3">68.7<small>円</small></td>
+        <td class="name"><a href="items/suntory-water-2l.html">サントリー天然水 2L</a><span class="badge">相場より36%安い</span><div class="sub">クラウドショップ楽天市場店・送料無料46出品中</div></td>
+        <td class="num eff"><span data-spu1="71.3" data-spu5="68.7" data-spu10="65.3">68.7</span><small>円</small></td>
         <td class="num">72.0<small>円</small></td>
         <td class="num muted">112.0<small>円</small></td>
-        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00ridco.oziwn016.g00ridco.oziwoa07/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcloudnetshop%2Fnz9684805%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fcloudnetshop%2Fi%2F10025959%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">お〜いお茶 緑茶 2L<span class="badge">相場より32%安い</span><div class="sub">ぱーそなるたのめーる・送料無料34出品中</div></td>
-        <td class="num eff" data-spu1="110.6" data-spu5="106.5" data-spu10="101.3">106.5<small>円</small></td>
+        <td class="name"><a href="items/ayataka-2l.html">綾鷹 2L</a><span class="badge">相場より31%安い</span><div class="sub">Good Luck便 楽天市場店・送料無料27出品中</div></td>
+        <td class="num eff"><span data-spu1="106.5" data-spu5="102.5" data-spu10="97.6">102.5</span><small>円</small></td>
+        <td class="num">107.5<small>円</small></td>
+        <td class="num muted">156.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00u60uo.oziwn514.g00u60uo.oziwo461/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgood-luckbin%2Fayamine2lp-2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fgood-luckbin%2Fi%2F10000475%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/oiocha-2l.html">お〜いお茶 緑茶 2L</a><span class="badge">相場より32%安い</span><div class="sub">ぱーそなるたのめーる・送料無料35出品中</div></td>
+        <td class="num eff"><span data-spu1="110.6" data-spu5="106.5" data-spu10="101.3">106.5</span><small>円</small></td>
         <td class="num">111.6<small>円</small></td>
-        <td class="num muted">165.0<small>円</small></td>
-        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="num muted">164.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qpdqo.oziwn647.g00qpdqo.oziwo86e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fp-tano%2F964-9059%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fp-tano%2Fi%2F10605264%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">サントリー天然水 550ml<span class="badge">相場より21%安い</span><div class="sub">ニシムタ 楽天市場店・送料無料42出品中</div></td>
-        <td class="num eff" data-spu1="159.2" data-spu5="153.3" data-spu10="145.8">153.3<small>円</small></td>
+        <td class="name"><a href="items/iyemon-2l.html">伊右衛門 2L</a><span class="badge">相場より17%安い</span><div class="sub">O9ショップ【オーナインショップ】・送料無料28出品中</div></td>
+        <td class="num eff"><span data-spu1="124.0" data-spu5="119.3" data-spu10="113.5">119.3</span><small>円</small></td>
+        <td class="num">125.1<small>円</small></td>
+        <td class="num muted">150.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qg07o.oziwn9dc.g00qg07o.oziwo6c3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmrk-09shop%2Fd4901777375529-2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmrk-09shop%2Fi%2F10041952%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/suntory-water-550.html">サントリー天然水 550ml</a><span class="badge">相場より24%安い</span><div class="sub">ニシムタ 楽天市場店・送料無料48出品中</div></td>
+        <td class="num eff"><span data-spu1="159.2" data-spu5="153.3" data-spu10="145.8">153.3</span><small>円</small></td>
         <td class="num">160.7<small>円</small></td>
-        <td class="num muted">203.0<small>円</small></td>
-        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="num muted">211.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00swwgo.oziwne76.g00swwgo.oziwoc06/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnishimuta%2F45191978-48%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fnishimuta%2Fi%2F10207006%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/irohasu-540.html">い・ろ・は・す 540ml</a><span class="badge">相場より16%安い</span><div class="sub">リカーBOSS 楽天市場店・送料無料21出品中</div></td>
+        <td class="num eff"><span data-spu1="160.4" data-spu5="154.4" data-spu10="146.9">154.4</span><small>円</small></td>
+        <td class="num">161.9<small>円</small></td>
+        <td class="num muted">192.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00rryxo.oziwnab8.g00rryxo.oziwoeea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fliquor-boss%2F34927%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fliquor-boss%2Fi%2F10034519%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       </tbody>
     </table></div>
@@ -101,96 +82,304 @@
       <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
       <tbody>
       <tr>
-        <td class="name">コカ・コーラ ゼロ 500ml<div class="sub">D-rink 北海道・送料無料14出品中</div></td>
-        <td class="num eff" data-spu1="182.0" data-spu5="175.0" data-spu10="166.1">175.0<small>円</small></td>
+        <td class="name"><a href="items/wilkinson-500.html">ウィルキンソン タンサン 500ml</a><span class="badge">相場より15%安い</span><div class="sub">ウォッカ&amp;テキーラ専門VodkaVakka・送料無料36出品中</div></td>
+        <td class="num eff"><span data-spu1="160.5" data-spu5="154.5" data-spu10="147.0">154.5</span><small>円</small></td>
+        <td class="num">162.0<small>円</small></td>
+        <td class="num muted">190.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00tff0o.oziwnfd5.g00tff0o.oziwo304/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fvodkavakka%2F912892-48%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fvodkavakka%2Fi%2F10001043%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/cola-zero-500.html">コカ・コーラ ゼロ 500ml</a><div class="sub">D-rink 北海道・送料無料21出品中</div></td>
+        <td class="num eff"><span data-spu1="182.0" data-spu5="175.0" data-spu10="166.1">175.0</span><small>円</small></td>
         <td class="num">190.8<small>円</small></td>
         <td class="num muted">216.0<small>円</small></td>
-        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00uouuo.oziwn082.g00uouuo.oziwo769/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fd-rink-hokkaido%2F2koz50p%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fd-rink-hokkaido%2Fi%2F10000017%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">コカ・コーラ 500ml<div class="sub">D-rink 北海道・送料無料10出品中</div></td>
-        <td class="num eff" data-spu1="187.3" data-spu5="180.2" data-spu10="171.4">180.2<small>円</small></td>
+        <td class="name"><a href="items/cola-500.html">コカ・コーラ 500ml</a><div class="sub">D-rink 北海道・送料無料12出品中</div></td>
+        <td class="num eff"><span data-spu1="187.3" data-spu5="180.2" data-spu10="171.4">180.2</span><small>円</small></td>
         <td class="num">190.8<small>円</small></td>
         <td class="num muted">216.0<small>円</small></td>
-        <td class="trend"><span class="spark-empty">記録をためています</span></td>
-        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00uouuo.oziwn082.g00uouuo.oziwo769/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fd-rink-hokkaido%2Fkolbless50p-2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fd-rink-hokkaido%2Fi%2F10000120%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00uouuo.oziwn082.g00uouuo.oziwo769/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fd-rink-hokkaido%2F2ko50p%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fd-rink-hokkaido%2Fi%2F10000011%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">コカ・コーラ 1.5L<div class="sub">東京生活館・送料無料11出品中</div></td>
-        <td class="num eff" data-spu1="204.8" data-spu5="197.1" data-spu10="187.6">197.1<small>円</small></td>
+        <td class="name"><a href="items/cola-1500.html">コカ・コーラ 1.5L</a><div class="sub">東京生活館・送料無料11出品中</div></td>
+        <td class="num eff"><span data-spu1="204.8" data-spu5="197.1" data-spu10="187.6">197.1</span><small>円</small></td>
         <td class="num">206.7<small>円</small></td>
         <td class="num muted">222.0<small>円</small></td>
-        <td class="trend"><span class="spark-empty">記録をためています</span></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00rzfoo.oziwne58.g00rzfoo.oziwofef/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fystbek%2F4902102141116-ccw2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fystbek%2Fi%2F10130665%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       </tbody>
     </table></div>
   </section>
   <section id="cat-2">
+    <h2>スポーツドリンク<span class="per">1Lあたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/aquarius-2l.html">アクエリアス 2L</a><span class="badge">相場より29%安い</span><div class="sub">北海道サービスショップ楽天市場店・送料無料23出品中</div></td>
+        <td class="num eff"><span data-spu1="114.0" data-spu5="109.7" data-spu10="104.4">109.7</span><small>円</small></td>
+        <td class="num">115.0<small>円</small></td>
+        <td class="num muted">161.0<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00sag7o.oziwn0e7.g00sag7o.oziwo6b3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhokkkaido%2F2aq2lp%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fhokkkaido%2Fi%2F10001543%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/pocari-500.html">ポカリスエット 500ml</a><span class="badge">相場より14%安い</span><div class="sub">大楠屋リカーショップ楽天市場店・送料無料32出品中</div></td>
+        <td class="num eff"><span data-spu1="270.5" data-spu5="260.4" data-spu10="247.8">260.4</span><small>円</small></td>
+        <td class="num">273.0<small>円</small></td>
+        <td class="num muted">318.5<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00ugx3o.oziwn349.g00ugx3o.oziwoff9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fol-shop%2F45019517-1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fol-shop%2Fi%2F10002551%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-3">
+    <h2>トイレットペーパー<span class="per">100mあたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/scottie-3x-single.html">スコッティ フラワーパック 3倍長持ち シングル</a><span class="badge">相場より21%安い</span><div class="sub">サンドラッグe-shop・送料無料26出品中</div></td>
+        <td class="num eff"><span data-spu1="82.3" data-spu5="79.3" data-spu10="75.5">79.3</span><small>円</small></td>
+        <td class="num">83.1<small>円</small></td>
+        <td class="num muted">104.8<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4901750140045x12%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10124760%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/elleair-single-55.html">エリエール トイレットティシュー シングル</a><span class="badge">相場より47%安い</span><div class="sub">ぱーそなるたのめーる・送料無料46出品中</div></td>
+        <td class="num eff"><span data-spu1="119.9" data-spu5="115.5" data-spu10="110.0">115.5</span><small>円</small></td>
+        <td class="num">121.0<small>円</small></td>
+        <td class="num muted">227.3<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qpdqo.oziwn647.g00qpdqo.oziwo86e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fp-tano%2F961-6327%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fp-tano%2Fi%2F10627959%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/scottie-3x-double.html">スコッティ フラワーパック 3倍長持ち ダブル</a><span class="badge">相場より16%安い</span><div class="sub">サンドラッグe-shop・送料無料30出品中</div></td>
+        <td class="num eff"><span data-spu1="159.9" data-spu5="154.0" data-spu10="146.7">154.0</span><small>円</small></td>
+        <td class="num">161.3<small>円</small></td>
+        <td class="num muted">193.1<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4901750227470x6%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10124768%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-4">
+    <h2>ティッシュ<span class="per">100組あたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/scottie-tissue-200.html">スコッティ ティッシュ 200組</a><span class="badge">相場より19%安い</span><div class="sub">ベイシア楽天市場店・送料無料31出品中</div></td>
+        <td class="num eff"><span data-spu1="39.6" data-spu5="37.8" data-spu10="35.6">37.8</span><small>円</small></td>
+        <td class="num">48.4<small>円</small></td>
+        <td class="num muted">59.6<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.oziwnd63.g00s0vmo.oziwoa6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4901750417352-12%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10155214%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/hanaceleb-200.html">ネピア 鼻セレブ ティッシュ 200組</a><span class="badge">相場より13%安い</span><div class="sub">あきんど専門店・送料無料35出品中</div></td>
+        <td class="num eff"><span data-spu1="121.9" data-spu5="117.3" data-spu10="111.6">117.3</span><small>円</small></td>
+        <td class="num">125.3<small>円</small></td>
+        <td class="num muted">143.2<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00ut2jo.oziwncde.g00ut2jo.oziwoed3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkyoto3303%2Fsss10000354%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkyoto3303%2Fi%2F10004541%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-5">
+    <h2>洗濯洗剤・柔軟剤</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/ariel-gel-refill.html">アリエール ジェル 詰め替え</a><span class="badge">相場より59%安い</span><div class="sub">プラチナエイト楽天市場店・送料無料8出品中</div></td>
+        <td class="num eff"><span data-spu1="60.7" data-spu5="58.5" data-spu10="55.7">58.5</span><small>円/100g</small></td>
+        <td class="num">61.3<small>円</small></td>
+        <td class="num muted">149.5<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00u4qco.oziwn936.g00u4qco.oziwoffd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fplatinum-eight%2F165%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fplatinum-eight%2Fi%2F10000161%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/lenor-1week-refill.html">レノア 超消臭1WEEK 詰め替え</a><span class="badge">相場より46%安い</span><div class="sub">kichibei・送料無料31出品中</div></td>
+        <td class="num eff"><span data-spu1="83.3" data-spu5="80.2" data-spu10="76.4">80.2</span><small>円/100ml</small></td>
+        <td class="num">84.0<small>円</small></td>
+        <td class="num muted">154.8<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00u3ajo.oziwn5c8.g00u3ajo.oziwo714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkichibei0318%2Fkichibee3f5f5353d8%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkichibei0318%2Fi%2F10099754%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/attack-zero-refill.html">アタックZERO 詰め替え</a><span class="badge">相場より24%安い</span><div class="sub">ステラスター 楽天市場店・送料無料31出品中</div></td>
+        <td class="num eff"><span data-spu1="104.0" data-spu5="100.2" data-spu10="95.4">100.2</span><small>円/100g</small></td>
+        <td class="num">104.9<small>円</small></td>
+        <td class="num muted">137.7<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00u7dvo.oziwn986.g00u7dvo.oziwobc1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsuterastar%2Fb0cvl7m39r-6%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsuterastar%2Fi%2F10002622%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-6">
+    <h2>食器用洗剤<span class="per">100mlあたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/joy-refill.html">除菌ジョイコンパクト 詰め替え</a><span class="badge">相場より16%安い</span><div class="sub">サンドラッグe-shop・送料無料12出品中</div></td>
+        <td class="num eff"><span data-spu1="54.7" data-spu5="52.7" data-spu10="50.2">52.7</span><small>円</small></td>
+        <td class="num">55.2<small>円</small></td>
+        <td class="num muted">65.6<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4987176290083x5%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10163698%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/cucute-refill.html">キュキュット 詰め替え</a><span class="badge">相場より27%安い</span><div class="sub">クスリのアオキ楽天市場店・送料無料29出品中</div></td>
+        <td class="num eff"><span data-spu1="59.9" data-spu5="57.7" data-spu10="55.0">57.7</span><small>円</small></td>
+        <td class="num">60.5<small>円</small></td>
+        <td class="num muted">82.6<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00ty7vo.oziwn462.g00ty7vo.oziwo384/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkusuriaoki-r%2F60000000011613%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkusuriaoki-r%2Fi%2F10044134%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-7">
+    <h2>ボディソープ・ハンドソープ<span class="per">100mlあたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/biore-u-hand-refill.html">ビオレu 泡ハンドソープ 詰め替え</a><span class="badge">相場より26%安い</span><div class="sub">くらしの庭・送料無料52出品中</div></td>
+        <td class="num eff"><span data-spu1="66.0" data-spu5="63.6" data-spu10="60.6">63.6</span><small>円</small></td>
+        <td class="num">66.6<small>円</small></td>
+        <td class="num muted">89.5<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00uorlo.oziwn7b9.g00uorlo.oziwoa04/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkantouyouryo%2F3776-002197%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkantouyouryo%2Fi%2F10000165%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/biore-u-body-refill.html">ビオレu ボディウォッシュ 詰め替え</a><span class="badge">相場より54%安い</span><div class="sub">くらしの庭・送料無料13出品中</div></td>
+        <td class="num eff"><span data-spu1="75.2" data-spu5="72.4" data-spu10="69.0">72.4</span><small>円</small></td>
+        <td class="num">75.9<small>円</small></td>
+        <td class="num muted">163.2<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00uorlo.oziwn7b9.g00uorlo.oziwoa04/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkantouyouryo%2F3776-002253%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkantouyouryo%2Fi%2F10000082%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-8">
+    <h2>歯みがき<span class="per">100gあたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/clinica-advantage.html">クリニカ アドバンテージ ハミガキ 130g</a><span class="badge">相場より37%安い</span><div class="sub">クスリのアオキ2号店楽天市場店・送料無料34出品中</div></td>
+        <td class="num eff"><span data-spu1="245.5" data-spu5="236.5" data-spu10="225.2">236.5</span><small>円</small></td>
+        <td class="num">247.7<small>円</small></td>
+        <td class="num muted">391.8<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00ufwqo.oziwn413.g00ufwqo.oziwoaf8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkusuriaoki-r-2%2F60000000019373%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkusuriaoki-r-2%2Fi%2F10036802%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-9">
+    <h2>大人用おむつ<span class="per">1枚あたり</span></h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="name"><a href="items/relief-usugata-3.html">リリーフ うす型パンツ 3回分 M-L</a><span class="badge">相場より31%安い</span><div class="sub">サンドラッグe-shop・送料無料21出品中</div></td>
+        <td class="num eff"><span data-spu1="75.3" data-spu5="72.5" data-spu10="69.1">72.5</span><small>円</small></td>
+        <td class="num">76.0<small>円</small></td>
+        <td class="num muted">110.9<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4901301440433x2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10120158%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      <tr>
+        <td class="name"><a href="items/relief-marude-2.html">リリーフ まるで下着 2回分 M-L</a><span class="badge">相場より24%安い</span><div class="sub">サンドラッグe-shop・送料無料15出品中</div></td>
+        <td class="num eff"><span data-spu1="83.4" data-spu5="80.4" data-spu10="76.6">80.4</span><small>円</small></td>
+        <td class="num">84.2<small>円</small></td>
+        <td class="num muted">110.6<small>円</small></td>
+        <td class="trend"><span class="spark-empty">記録中</span></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4901301440006x2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10120207%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+      </tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section id="cat-10">
     <h2>おむつ<span class="per">1枚あたり</span></h2>
     <div class="table-wrap"><table>
       <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
       <tbody>
       <tr>
-        <td class="name">ムーニー テープ M<span class="badge">相場より12%安い</span><div class="sub">ショップ泉嘉・送料無料19出品中</div></td>
-        <td class="num eff" data-spu1="33.7" data-spu5="32.5" data-spu10="30.9">32.5<small>円</small></td>
+        <td class="name"><a href="items/moony-tape-m.html">ムーニー テープ M</a><span class="badge">相場より20%安い</span><div class="sub">ショップ泉嘉・送料無料18出品中</div></td>
+        <td class="num eff"><span data-spu1="33.7" data-spu5="32.5" data-spu10="30.9">32.5</span><small>円</small></td>
         <td class="num">34.0<small>円</small></td>
-        <td class="num muted">38.7<small>円</small></td>
+        <td class="num muted">42.4<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00uvg2o.oziwn53c.g00uvg2o.oziwo12f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fizuka%2Faj4009rakuten353fd0838f%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fizuka%2Fi%2F10001070%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">メリーズ エアスルー パンツ L<div class="sub">TOWA・送料無料21出品中</div></td>
-        <td class="num eff" data-spu1="36.6" data-spu5="35.2" data-spu10="33.6">35.2<small>円</small></td>
+        <td class="name"><a href="items/merries-airthrough-pants-l.html">メリーズ エアスルー パンツ L</a><div class="sub">TOWA・送料無料21出品中</div></td>
+        <td class="num eff"><span data-spu1="36.6" data-spu5="35.2" data-spu10="33.6">35.2</span><small>円</small></td>
         <td class="num">36.9<small>円</small></td>
         <td class="num muted">40.0<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00tqjoo.oziwn210.g00tqjoo.oziwoc4f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flien0305%2Fcompass1779332191%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flien0305%2Fi%2F10004223%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">パンパース さらさらケア パンツ L<span class="badge">相場より31%安い</span><div class="sub">TRYX3 2号店・送料無料38出品中</div></td>
-        <td class="num eff" data-spu1="36.6" data-spu5="35.3" data-spu10="33.6">35.3<small>円</small></td>
+        <td class="name"><a href="items/pampers-sarasara-pants-l.html">パンパース さらさらケア パンツ L</a><span class="badge">相場より31%安い</span><div class="sub">TRYX3楽天市場店・送料無料38出品中</div></td>
+        <td class="num eff"><span data-spu1="36.6" data-spu5="35.3" data-spu10="33.6">35.3</span><small>円</small></td>
         <td class="num">36.9<small>円</small></td>
         <td class="num muted">53.6<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
-        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00u65wo.oziwn500.g00u65wo.oziwo03a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftry3-2%2F4987176386304-2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ftry3-2%2Fi%2F10011548%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00psjvo.oziwnc71.g00psjvo.oziwofc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftry3%2F4987176386304-2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ftry3%2Fi%2F10037324%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">メリーズ エアスルー テープ M<div class="sub">サンドラッグe-shop・送料無料23出品中</div></td>
-        <td class="num eff" data-spu1="37.2" data-spu5="35.8" data-spu10="34.1">35.8<small>円</small></td>
+        <td class="name"><a href="items/merries-airthrough-tape-m.html">メリーズ エアスルー テープ M</a><div class="sub">サンドラッグe-shop・送料無料23出品中</div></td>
+        <td class="num eff"><span data-spu1="37.2" data-spu5="35.8" data-spu10="34.1">35.8</span><small>円</small></td>
         <td class="num">37.5<small>円</small></td>
         <td class="num muted">41.3<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4901301437716x4%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10150325%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">パンパース さらさらケア テープ M<span class="badge">相場より18%安い</span><div class="sub">生活便利創庫スーパーキッド・送料無料24出品中</div></td>
-        <td class="num eff" data-spu1="37.8" data-spu5="36.4" data-spu10="34.6">36.4<small>円</small></td>
+        <td class="name"><a href="items/pampers-sarasara-tape-m.html">パンパース さらさらケア テープ M</a><span class="badge">相場より18%安い</span><div class="sub">生活便利創庫スーパーキッド・送料無料24出品中</div></td>
+        <td class="num eff"><span data-spu1="37.8" data-spu5="36.4" data-spu10="34.6">36.4</span><small>円</small></td>
         <td class="num">38.1<small>円</small></td>
         <td class="num muted">46.2<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qhsoo.oziwnf08.g00qhsoo.oziwo7d2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsuperkid%2F4987176203328-3%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsuperkid%2Fi%2F10022849%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">パンパース 肌へのいちばん テープ M<span class="badge">相場より22%安い</span><div class="sub">ベイシア楽天市場店・送料無料17出品中</div></td>
-        <td class="num eff" data-spu1="38.7" data-spu5="37.3" data-spu10="35.5">37.3<small>円</small></td>
+        <td class="name"><a href="items/pampers-hajimete-tape-m.html">パンパース 肌へのいちばん テープ M</a><span class="badge">相場より22%安い</span><div class="sub">ベイシア楽天市場店・送料無料17出品中</div></td>
+        <td class="num eff"><span data-spu1="38.7" data-spu5="37.3" data-spu10="35.5">37.3</span><small>円</small></td>
         <td class="num">39.1<small>円</small></td>
         <td class="num muted">50.3<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.oziwnd63.g00s0vmo.oziwoa6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4987176341518-3%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10176871%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">ムーニーマン パンツ L<span class="badge">相場より23%安い</span><div class="sub">サンドラッグe-shop・送料無料19出品中</div></td>
-        <td class="num eff" data-spu1="43.5" data-spu5="41.9" data-spu10="39.9">41.9<small>円</small></td>
+        <td class="name"><a href="items/moony-pants-l.html">ムーニーマン パンツ L</a><span class="badge">相場より23%安い</span><div class="sub">サンドラッグe-shop・送料無料19出品中</div></td>
+        <td class="num eff"><span data-spu1="43.5" data-spu5="41.9" data-spu10="39.9">41.9</span><small>円</small></td>
         <td class="num">43.9<small>円</small></td>
         <td class="num muted">56.7<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
-        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4903111206438x4%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10052647%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
+        <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00qvyfo.oziwn976.g00qvyfo.oziwo00a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4903111206155x4%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10052646%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">メリーズ ファーストプレミアム パンツ L<span class="badge">相場より27%安い</span><div class="sub">サンドラッグe-shop・送料無料20出品中</div></td>
-        <td class="num eff" data-spu1="44.9" data-spu5="43.2" data-spu10="41.2">43.2<small>円</small></td>
+        <td class="name"><a href="items/merries-first-pants-l.html">メリーズ ファーストプレミアム パンツ L</a><span class="badge">相場より27%安い</span><div class="sub">サンドラッグe-shop・送料無料20出品中</div></td>
+        <td class="num eff"><span data-spu1="44.9" data-spu5="43.2" data-spu10="41.2">43.2</span><small>円</small></td>
         <td class="num">45.3<small>円</small></td>
         <td class="num muted">61.8<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
@@ -199,22 +388,22 @@
       </tbody>
     </table></div>
   </section>
-  <section id="cat-3">
+  <section id="cat-11">
     <h2>おしりふき<span class="per">1枚あたり</span></h2>
     <div class="table-wrap"><table>
       <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
       <tbody>
       <tr>
-        <td class="name">おしりふき ムーニー やわらか素材<span class="badge">相場より51%安い</span><div class="sub">ユニ・チャームダイレクトショップ・送料無料34出品中</div></td>
-        <td class="num eff" data-spu1="1.52" data-spu5="1.47" data-spu10="1.40">1.47<small>円</small></td>
+        <td class="name"><a href="items/wipes-moony.html">おしりふき ムーニー やわらか素材</a><span class="badge">相場より38%安い</span><div class="sub">ユニ・チャームダイレクトショップ・送料無料36出品中</div></td>
+        <td class="num eff"><span data-spu1="1.52" data-spu5="1.47" data-spu10="1.40">1.47</span><small>円</small></td>
         <td class="num">1.54<small>円</small></td>
-        <td class="num muted">3.14<small>円</small></td>
+        <td class="num muted">2.48<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00q215o.oziwn0bb.g00q215o.oziwo1f8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F100695%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10001904%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">おしりふき パンパース 肌へのいちばん<span class="badge">相場より23%安い</span><div class="sub">ぱーそなるたのめーる・送料無料31出品中</div></td>
-        <td class="num eff" data-spu1="3.75" data-spu5="3.61" data-spu10="3.43">3.61<small>円</small></td>
+        <td class="name"><a href="items/wipes.html">おしりふき パンパース 肌へのいちばん</a><span class="badge">相場より23%安い</span><div class="sub">ぱーそなるたのめーる・送料無料32出品中</div></td>
+        <td class="num eff"><span data-spu1="3.75" data-spu5="3.61" data-spu10="3.43">3.61</span><small>円</small></td>
         <td class="num">3.93<small>円</small></td>
         <td class="num muted">5.11<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
@@ -223,30 +412,30 @@
       </tbody>
     </table></div>
   </section>
-  <section id="cat-4">
+  <section id="cat-12">
     <h2>粉ミルク<span class="per">100gあたり</span></h2>
     <div class="table-wrap"><table>
       <thead><tr><th>商品・今日の最安ショップ</th><th class="num">実質</th><th class="num">表示</th><th class="num">相場</th><th>推移</th><th></th></tr></thead>
       <tbody>
       <tr>
-        <td class="name">粉ミルク はいはい<div class="sub">マツモトキヨシ楽天市場店・送料無料52出品中</div></td>
-        <td class="num eff" data-spu1="282.7" data-spu5="272.2" data-spu10="259.0">272.2<small>円</small></td>
+        <td class="name"><a href="items/haihai-milk.html">粉ミルク はいはい</a><div class="sub">マツモトキヨシ楽天市場店・送料無料51出品中</div></td>
+        <td class="num eff"><span data-spu1="282.7" data-spu5="272.2" data-spu10="259.0">272.2</span><small>円</small></td>
         <td class="num">285.3<small>円</small></td>
         <td class="num muted">314.7<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,2" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00rqszo.oziwn978.g00rqszo.oziwob40/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsukiyo%2F4987244600059%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmatsukiyo%2Fi%2F10534602%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">粉ミルク ほほえみ<div class="sub">ゴダイ 楽天市場店・送料無料17出品中</div></td>
-        <td class="num eff" data-spu1="367.0" data-spu5="353.3" data-spu10="336.1">353.3<small>円</small></td>
+        <td class="name"><a href="items/hohoemi-milk.html">粉ミルク ほほえみ</a><div class="sub">ゴダイ 楽天市場店・送料無料17出品中</div></td>
+        <td class="num eff"><span data-spu1="367.0" data-spu5="353.3" data-spu10="336.1">353.3</span><small>円</small></td>
         <td class="num">370.4<small>円</small></td>
         <td class="num muted">410.3<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
         <td class="go"><a href="https://hb.afl.rakuten.co.jp/hgc/g00ruqao.oziwne39.g00ruqao.oziwo649/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-godai%2F4902705129566%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-godai%2Fi%2F10188128%2F&amp;rafcid=wsc_i_is_e9da9772-5a86-43d7-8167-8e38c2154284" target="_blank" rel="sponsored nofollow noopener">楽天で見る</a></td>
       </tr>
       <tr>
-        <td class="name">粉ミルク すこやかM1<span class="badge">相場より14%安い</span><div class="sub">ベイシア楽天市場店・送料無料16出品中</div></td>
-        <td class="num eff" data-spu1="377.7" data-spu5="363.6" data-spu10="346.0">363.6<small>円</small></td>
+        <td class="name"><a href="items/sukoyaka-milk.html">粉ミルク すこやかM1</a><span class="badge">相場より14%安い</span><div class="sub">ベイシア楽天市場店・送料無料16出品中</div></td>
+        <td class="num eff"><span data-spu1="377.7" data-spu5="363.6" data-spu10="346.0">363.6</span><small>円</small></td>
         <td class="num">381.2<small>円</small></td>
         <td class="num muted">444.5<small>円</small></td>
         <td class="trend"><svg class="spark" viewBox="0 0 120 28" role="img" aria-label="2日間の最安の推移"><polyline points="0,26 120,26" /></svg></td>
@@ -255,38 +444,26 @@
       </tbody>
     </table></div>
   </section>
-
-  <h3>計算のしかた</h3>
-  <div class="formula">
-    獲得ポイント ＝ 税抜価格 ×（SPU倍率 ＋ ショップのポイント倍率 − 1）%（切り捨て）<br>
-    実質価格 ＝ 表示価格 − 獲得ポイント
-  </div>
+  <h2>計算のしかた</h2>
+  <div class="formula">獲得ポイント ＝ 税抜価格 ×（SPU倍率 ＋ ショップのポイント倍率 − 1）%（切り捨て）<br>実質価格 ＝ 表示価格 − 獲得ポイント</div>
   <ul class="note">
-    <li>商品名から総容量・総枚数を読み取り、まとめ買いの単価を出しています。税率は飲料・粉ミルクが8%（軽減税率）、おむつ・おしりふきが10%です。</li>
+    <li>商品名から総容量・総枚数を読み取り、まとめ買いの単価を出しています。税率は飲食料品8%、それ以外10%です。</li>
     <li>お買い物マラソンの買い回り、クーポン、ポイントの上限・期間限定ポイントは含めていません。</li>
-    <li>価格は記録した時点のものです。購入前に必ず商品ページで最新の価格とポイントを確認してください。</li>
-    <li>「過去最安」は、このメモで毎日記録した価格の中での比較です。セール直前に値上げされた疑いがある出品は表示しません。</li>
+    <li>「過去最安」はこのサイトで毎日記録した価格の中での比較です。セール直前に値上げされた疑いがある出品は「安い」と表示しません。</li>
   </ul>
-
-  <h3>このメモについて</h3>
-  <ul class="note">
-    <li>商品リンクは楽天アフィリエイトのリンクです（PR）。</li>
-    <li>メーカーやショップとは関係のない、個人による記録です。</li>
-  </ul>
-
   <footer>
+    <p><a href="index.html">まとめ買い 実質価格メモ トップ</a></p>
+    <p>商品リンクは楽天アフィリエイトのリンクです（PR）。価格・ポイントは記録時点のもので、購入前に商品ページで必ず確認してください。メーカーやショップとは関係のない、個人による記録です。</p>
     <!-- Rakuten Web Service Credit -->
-    <a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+    <p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a></p>
   </footer>
 </main>
 <script>
   document.querySelectorAll('.spu button').forEach(function (b) {
     b.addEventListener('click', function () {
       var spu = b.dataset.spu;
-      document.querySelectorAll('.spu button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-      document.querySelectorAll('.eff').forEach(function (td) {
-        td.firstChild.nodeValue = td.getAttribute('data-spu' + spu);
-      });
+      document.querySelectorAll('.spu button').forEach(function (x) { x.setAttribute('aria-pressed', String(x.dataset.spu === spu)); });
+      document.querySelectorAll('[data-spu' + spu + ']').forEach(function (el) { el.firstChild.nodeValue = el.getAttribute('data-spu' + spu); });
     });
   });
 </script>
