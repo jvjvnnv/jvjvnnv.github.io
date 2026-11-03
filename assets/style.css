@@ -61,3 +61,53 @@ ul { padding-left:1.2em; }
 .key.med { border-top:2px dashed var(--med); }
 .related li { margin:4px 0; }
 footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted); }
+:root { --paper:#fffaf0; --amber-bg:#faeeda; --amber-fg:#633806; --amber-sub:#854f0b; --coral-bg:#faece7; --coral-fg:#4a1b0c; --coral-strong:#993c1d; --teal-bg:#e1f5ee; --teal-fg:#085041; --teal:#0f6e56; }
+@media (prefers-color-scheme: dark) {
+  :root { --paper:#1f1d19; --amber-bg:#3b2a12; --amber-fg:#fac775; --amber-sub:#ef9f27; --coral-bg:#3a2017; --coral-fg:#f5c4b3; --coral-strong:#f0997b; --teal-bg:#0b3a2f; --teal-fg:#9fe1cb; --teal:#5dcaa5; }
+}
+body { background: var(--paper); }
+h1, h2, .brand, .hand { font-family: "Zen Maru Gothic", system-ui, sans-serif; font-weight: 700; }
+.visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+.site-head { border-bottom:1px solid var(--line); background: var(--paper); }
+.site-head-in { max-width:860px; margin:0 auto; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.brand { font-size:1.35rem; color:var(--fg); text-decoration:none; }
+.brand span { color: var(--accent); }
+.upd-time { font-size:.8rem; color:var(--muted); }
+main { padding-top: 20px; }
+.tagline { font-size:.95rem; }
+.talk { display:flex; gap:12px; align-items:flex-start; margin:14px 0 8px; }
+.talk-icon { width:52px; height:52px; border-radius:50%; flex-shrink:0; }
+.profile { display:flex; gap:16px; align-items:center; margin-top:36px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.profile img { border-radius:50%; flex-shrink:0; }
+.profile-name { font-family:"Zen Maru Gothic", system-ui, sans-serif; font-weight:700; }
+.profile p { margin:4px 0 0; font-size:.9rem; color:var(--muted); }
+.talk-bubble, .memo-body { background:var(--amber-bg); color:var(--amber-fg); border-radius:14px; padding:10px 14px; font-family:"Klee One", system-ui, sans-serif; font-size:1rem; line-height:1.7; }
+.talk-by, .memo-by { font-size:.78rem; color:var(--amber-sub); margin-top:2px; }
+.memo { display:flex; gap:10px; align-items:flex-start; margin:8px 0 4px; }
+.memo-icon { width:40px; height:40px; border-radius:50%; flex-shrink:0; }
+.notes { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-bottom:8px; }
+.note-card { display:flex; flex-direction:column; gap:2px; background:var(--coral-bg); color:var(--coral-fg); border-radius:12px; padding:12px 14px; text-decoration:none; transition: transform .15s; }
+.note-card:hover { transform: rotate(0deg) translateY(-2px) !important; }
+.note-badge { align-self:flex-start; background:var(--coral-strong); color:var(--coral-bg); font-size:.72rem; padding:1px 8px; border-radius:4px; }
+.note-name { font-size:.92rem; margin-top:4px; }
+.note-price { color:var(--coral-strong); font-size:1.7rem; font-weight:700; line-height:1.2; font-variant-numeric: tabular-nums; }
+.note-price small { font-size:.8rem; }
+.note-sub { font-size:.78rem; }
+.about-data { margin:22px 0 18px; border:1px solid var(--line); background:var(--card); border-radius:10px; padding:12px 14px; font-size:.85rem; color:var(--muted); }
+.about-data b { color: var(--fg); }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.chips span { background:var(--teal-bg); color:var(--teal-fg); padding:1px 10px; border-radius:4px; font-size:.78rem; }
+.faq { margin-top:32px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; font-size:.88rem; color:var(--muted); }
+.faq summary { cursor:pointer; color:var(--fg); font-weight:600; }
+@media (max-width: 640px) {
+  .table-wrap table thead { display:none; }
+  .table-wrap table, .table-wrap tbody, .table-wrap tr, .table-wrap td { display:block; width:100%; }
+  .table-wrap tr { display:grid; grid-template-columns: 1fr auto; gap:2px 12px; padding:12px 14px; border-bottom:1px solid var(--line); }
+  .table-wrap tbody tr:last-child { border-bottom:none; }
+  .table-wrap td { border:none; padding:0; }
+  .table-wrap td.name { grid-column: 1 / -1; min-width:0; }
+  .table-wrap td.trend { display:none; }
+  .table-wrap td.num.muted::before { content:"相場 "; font-size:.75rem; }
+  .table-wrap td.num:not(.eff):not(.muted)::before { content:"表示 "; font-size:.75rem; color:var(--muted); }
+  .table-wrap td.eff { font-size:1.2rem; text-align:left; }
+}

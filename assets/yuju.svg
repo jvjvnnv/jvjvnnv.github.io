@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="段ボールの山の前に立つ女性の後ろ姿">
+  <defs><clipPath id="c"><circle cx="120" cy="120" r="120"/></clipPath></defs>
+  <g clip-path="url(#c)">
+    <rect width="240" height="240" fill="#FBE7CF"/>
+    <!-- 段ボールの山 -->
+    <g stroke="#9A6A36" stroke-width="2.5" stroke-linejoin="round">
+      <rect x="14" y="120" width="80" height="64" rx="4" fill="#D9A766"/>
+      <rect x="28" y="76" width="56" height="46" rx="4" fill="#E2B577"/>
+      <rect x="150" y="128" width="78" height="60" rx="4" fill="#D9A766"/>
+      <rect x="164" y="92" width="48" height="38" rx="4" fill="#E2B577"/>
+    </g>
+    <g stroke="#B9874C" stroke-width="5">
+      <line x1="54" y1="120" x2="54" y2="184"/>
+      <line x1="56" y1="76" x2="56" y2="122"/>
+      <line x1="189" y1="128" x2="189" y2="188"/>
+      <line x1="188" y1="92" x2="188" y2="130"/>
+    </g>
+    <!-- 体（ニット・肩幅を広めに） -->
+    <path d="M44 240 C48 196 76 176 120 174 C164 176 192 196 196 240 Z" fill="#E07A4F"/>
+    <path d="M100 180 C108 188 132 188 140 180" fill="none" stroke="#C4623A" stroke-width="3" stroke-linecap="round"/>
+    <!-- 首 -->
+    <rect x="108" y="140" width="24" height="40" rx="10" fill="#F2C9A5"/>
+    <!-- 髪：後頭部（えりあしは短め） -->
+    <path d="M86 108 C86 78 101 62 120 62 C139 62 154 78 154 108 C154 128 146 142 134 148 C128 151 112 151 106 148 C94 142 86 128 86 108 Z" fill="#4A3426"/>
+    <path d="M102 84 C112 77 128 77 138 84" fill="none" stroke="#6B4E3B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 110 C99 126 104 138 110 146" fill="none" stroke="#6B4E3B" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M144 110 C141 126 136 138 130 146" fill="none" stroke="#6B4E3B" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- 耳 -->
+    <ellipse cx="85" cy="112" rx="5" ry="8" fill="#EDBB94"/>
+    <ellipse cx="155" cy="112" rx="5" ry="8" fill="#EDBB94"/>
+    <!-- おだんご＋ヘアゴム -->
+    <circle cx="120" cy="52" r="16" fill="#4A3426"/>
+    <path d="M110 48 C116 44 124 44 130 48" fill="none" stroke="#6B4E3B" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="108" y="62" width="24" height="7" rx="3.5" fill="#E07A4F"/>
+  </g>
+  <!-- 吹き出しの「!」 -->
+  <g transform="translate(184 46)">
+    <circle r="20" fill="#fff" stroke="#E07A4F" stroke-width="3"/>
+    <rect x="-3.5" y="-12" width="7" height="15" rx="3" fill="#E07A4F"/>
+    <circle cy="9" r="4" fill="#E07A4F"/>
+  </g>
+</svg>
