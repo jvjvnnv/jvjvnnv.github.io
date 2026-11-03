@@ -120,6 +120,15 @@ main { padding-top: 20px; }
 .note-price { color:var(--coral-strong); font-size:1.7rem; font-weight:700; line-height:1.2; font-variant-numeric: tabular-nums; }
 .note-price small { font-size:.8rem; }
 .note-sub { font-size:.78rem; }
+.note-vs { font-size:.8rem; }
+.note-more { font-size:.8rem; font-weight:700; color:var(--coral-strong); margin-top:4px; }
+@media (max-width: 640px) {
+  .note-card { display:grid; grid-template-columns: 96px 1fr; column-gap:14px; row-gap:2px; align-items:start; }
+  .note-card > :not(.note-img) { grid-column: 2; }
+  .note-img { grid-row: 1 / span 6; width:96px; height:96px; margin:0; align-self:center; }
+  .note-badge { justify-self:start; }
+  .note-name { margin-top:2px; line-height:1.4; }
+}
 .about-data { margin:22px 0 18px; border:1px solid var(--line); background:var(--card); border-radius:10px; padding:12px 14px; font-size:.85rem; color:var(--muted); }
 .about-data b { color: var(--fg); }
 .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
