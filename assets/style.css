@@ -92,7 +92,7 @@ main { padding-top: 20px; }
 .intro-chips span { background:var(--soft); color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:1px 12px; font-size:.8rem; font-weight:700; }
 .intro-status { display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 12px; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:6px 12px; font-size:.82rem; color:var(--muted); }
 .talk-short { display:none; }
-.ad-note { max-width:860px; margin:0 auto; padding:4px 16px 0; font-size:.72rem; color:var(--muted); }
+.ad-note { color:var(--fg); }
 @media (max-width: 640px) {
   .upd-time { display:none; }
   .intro-title { font-size:1.35rem; }
