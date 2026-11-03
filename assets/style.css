@@ -10,6 +10,7 @@ h1 { font-size: 1.5rem; line-height: 1.4; margin: 0 0 6px; }
 h2 { font-size: 1.12rem; margin: 36px 0 10px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
 h2 .per { font-size:.85rem; font-weight:normal; color:var(--muted); }
 .lead { color: var(--muted); margin: 0 0 16px; }
+.tagline { font-weight:700; color: var(--accent); margin: 0 0 6px; }
 .crumbs { font-size:.82rem; color:var(--muted); margin-bottom:12px; }
 .crumbs a { color: var(--muted); }
 .jump { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
