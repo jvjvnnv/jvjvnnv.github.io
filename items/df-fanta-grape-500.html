@@ -19,13 +19,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Yomogi&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 <script>if (/(\.github\.io|\.pages\.dev)$/.test(location.hostname)) location.replace("https://kyougaotoku.com" + location.pathname + location.hash);</script>
-<script type="application/ld+json">{"itemListElement":[{"item":"https://kyougaotoku.com/","name":"今日がお得.com","@type":"ListItem","position":1},{"item":"https://kyougaotoku.com/cat/%E7%82%AD%E9%85%B8%E9%A3%B2%E6%96%99.html","name":"炭酸飲料","@type":"ListItem","position":2},{"item":"https://kyougaotoku.com/items/df-fanta-grape-500.html","name":"ファンタ グレープ 500ml","@type":"ListItem","position":3}],"@type":"BreadcrumbList","@context":"https://schema.org"}</script>
-
+<script type="application/ld+json">{"@type":"BreadcrumbList","@context":"https://schema.org","itemListElement":[{"item":"https://kyougaotoku.com/","name":"今日がお得.com","@type":"ListItem","position":1},{"item":"https://kyougaotoku.com/cat/%E7%82%AD%E9%85%B8%E9%A3%B2%E6%96%99.html","name":"炭酸飲料","@type":"ListItem","position":2},{"item":"https://kyougaotoku.com/items/df-fanta-grape-500.html","name":"ファンタ グレープ 500ml","@type":"ListItem","position":3}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-92BXWV05K4"></script>
+<script>
+  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-92BXWV05K4');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[rel~="sponsored"]');
+    if (!a) return;
+    var row = a.closest('tr'), name = row && row.querySelector('.name a');
+    gtag('event', 'rakuten_click', { item_name: (name ? name.textContent : document.title).trim().slice(0, 100), link_place: a.className || (row ? 'table' : 'page'), transport_type: 'beacon' });
+  });
+</script>
 </head>
 <body data-root="../">
 <header class="site-head"><div class="site-head-in">
   <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">得</span><span class="brand-text"><span>今日がお得<span class="brand-dot">.com</span></span><span class="brand-sub">楽天の買い時メモ</span></span></a>
-  <span class="upd-time">11/8（日） 8:18 更新</span>
+  <span class="upd-time">11/8（日） 9:22 更新</span>
   <button type="button" class="search-open" aria-expanded="false" aria-controls="search">🔍<span>さがす</span></button>
 </div>
 <div class="search" id="search" hidden><div class="search-in">
@@ -122,7 +132,7 @@
   <footer>
     <p><a href="../index.html">今日がお得.com トップ</a></p>
     <p class="ad-note">【PR】当サイトはアフィリエイト広告を利用しています</p>
-    
+    <p>アクセス解析のため Google アナリティクス（Cookie を使用）を利用しています。データは匿名で集計され、個人を特定するものではありません。<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Google によるデータの使用について</a></p>
     <p>価格・ポイントはチェックした時点のもので、購入前に商品ページで必ず確認してください。メーカーやショップとは関係のない、個人が運営しているサイトです。</p>
     <!-- Rakuten Web Service Credit -->
     <p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a></p>
