@@ -108,7 +108,7 @@ main { padding-top: 20px; }
 .profile img { border-radius:50%; flex-shrink:0; object-fit:cover; object-position:55% 40%; }
 .profile-name { font-family:"Zen Maru Gothic", system-ui, sans-serif; font-weight:700; }
 .profile p { margin:4px 0 0; font-size:.9rem; color:var(--muted); }
-.talk-bubble, .memo-body { background:var(--amber-bg); color:var(--amber-fg); border-radius:14px; padding:10px 14px; font-family:"Yomogi", "Klee One", system-ui, sans-serif; font-size:1.08rem; line-height:1.75; letter-spacing:.02em; }
+.talk-bubble, .memo-body { background:var(--amber-bg); color:var(--amber-fg); border-radius:14px; padding:10px 14px; font-size:.98rem; line-height:1.75; }
 .talk-by, .memo-by { font-size:.78rem; color:var(--amber-sub); margin-top:2px; }
 .memo { display:flex; gap:10px; align-items:flex-start; margin:8px 0 4px; }
 .memo-icon { width:40px; height:40px; border-radius:50%; flex-shrink:0; object-fit:cover; object-position:55% 40%; }
