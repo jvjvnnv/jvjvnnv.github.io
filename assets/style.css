@@ -59,12 +59,18 @@ ul { padding-left:1.2em; }
 .chart { margin:0; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:8px; }
 .chart svg { width:100%; height:auto; display:block; }
 .chart .grid { stroke:var(--line); stroke-width:1; }
-.chart .ylab { font-size:11px; fill:var(--muted); text-anchor:end; }
-.chart .xlab { font-size:11px; fill:var(--muted); text-anchor:middle; }
+.chart .ylab { font-size:16px; fill:var(--muted); text-anchor:end; }
+.chart .xlab { font-size:16px; fill:var(--muted); text-anchor:middle; }
 .chart .low { fill:none; stroke:var(--accent); stroke-width:2.5; }
 .chart .med { fill:none; stroke:var(--med); stroke-width:1.5; stroke-dasharray:4 4; }
 .chart .dot { fill:var(--accent); }
 .chart figcaption { font-size:.78rem; color:var(--muted); padding:4px 8px; }
+.chart .chart-help { margin:2px 6px 6px; font-size:.82rem; line-height:1.6; color:var(--fg); }
+.chart .chart-help b { font-weight:700; }
+.chart .endlab { font-size:21px; font-weight:700; }
+.chart .low-lab { fill:var(--accent); }
+.chart .med-lab { fill:var(--muted); }
+.chart .dotlab { font-size:19px; font-weight:700; fill:var(--accent); paint-order:stroke; stroke:var(--card); stroke-width:5px; }
 .key { display:inline-block; width:16px; height:0; border-top:3px solid var(--accent); vertical-align:middle; margin-right:2px; }
 .key.med { border-top:2px dashed var(--med); }
 .related li { margin:4px 0; }
@@ -179,7 +185,7 @@ main { padding-top: 20px; }
   .table-wrap td { border:none; padding:0; }
   .table-wrap td.name { grid-column: 1 / -1; min-width:0; }
   .table-wrap td.trend { display:none; }
-  .table-wrap td.num.muted::before { content:"他店の目安 "; font-size:.75rem; }
+  .table-wrap td.num.muted::before { content:"相場 "; font-size:.75rem; }
   .table-wrap td.num:not(.eff):not(.muted)::before { content:"表示 "; font-size:.75rem; color:var(--muted); }
   .table-wrap td.eff { font-size:1.2rem; text-align:left; }
 }
